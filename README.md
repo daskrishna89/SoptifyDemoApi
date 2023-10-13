@@ -1,6 +1,6 @@
 # SoptifyDemoApi
  This API is integrated using NodeJs/Express JS, backend is MySql Database with relation.
- Clone this Source code, Add the .env at root directory and run npm start to start the application.
+ Clone this Source code, execute command npm install and Add the .env at root directory and run npm start to start the application.
 
 ## API urls are given below
 
