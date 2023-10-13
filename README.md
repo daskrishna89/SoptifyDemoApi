@@ -4,10 +4,13 @@
 
 ## API urls are given below
 
-*  ** http://localhost:3100/get-tokens
+*  ** http://localhost:3100/get-tokens**
    * This
    * 
 
-*  ** http://localhost:3100/store-track-by-irsc
-*  ** http://localhost:3100/track-list?irsc=USWB11403680
-*  ** http://localhost:3100/aritist-list?name=the beatles
+*  ** http://localhost:3100/store-track-by-irsc**
+   *
+*  ** http://localhost:3100/track-list?irsc=USWB11403680**
+   *
+*  ** http://localhost:3100/aritist-list?name=the beatles**
+   *
