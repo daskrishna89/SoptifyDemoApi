@@ -191,7 +191,7 @@
     app.use(bodyParser.urlencoded({ extended: false }));
 
     // Get Token Functionality Defines Here
-    app.get('/get-tokens', function(req, res) {
+    app.get('/Login/getToken', function(req, res) {
 
         let username = req.headers['user_name'];
         let pwd = req.headers['password'];
@@ -204,12 +204,13 @@
                 'bearer_token':bearerToken,
             });
         }else{
-            res.send({'status': 403, 'msg':'Invalid Credential'});
+            res.status(400);
+            res.send('Invalid Credential');
         }
     });
 
     // Post Spotify Track By IRSC and Store it
-    app.post('/store-track-by-irsc', validateToken, function(req, res){
+    app.post('/Tracks', validateToken, function(req, res){
         console.log(req.body.irsc);
         let req_irsc = req.body.irsc;
 
@@ -353,7 +354,7 @@
     });
 
     // Get By IRSC ID
-    app.get('/track-list', validateToken, function(req, res){
+    app.get('/Lists/Track', validateToken, function(req, res){
         // console.log(req.query.irsc);
         let req_irsc = req.query.irsc;
 
@@ -389,7 +390,7 @@
     });
 
     // Get By Aritist Name
-    app.get('/aritist-list', validateToken, function(req, res){
+    app.get('/Lists/Artist', validateToken, function(req, res){
         console.log(req.query.name);
         let req_artist = req.query.name;
 
